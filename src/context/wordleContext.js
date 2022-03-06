@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { getWordleFromBackend } from "../api/wordle"
+import { getWordleFromBackend, getWordByDate } from "../api/wordle"
 
 const { Provider, Consumer } = React.createContext()
 
@@ -15,7 +15,7 @@ class SpotifyUserControlsProvider extends Component {
   getWordleValue = async () => {
     // get value if user can edit from db and set it to the state
     // setInterval(async () => {
-    const whatsTheWordleAnswerAPICall = await getWordleFromBackend()
+    const whatsTheWordleAnswerAPICall = await getWordByDate()
 
     console.log(whatsTheWordleAnswerAPICall)
 
