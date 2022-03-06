@@ -6,7 +6,7 @@ export const getWordleFromBackend = async () => {
     let baseURL =
       window.location.hostname === "localhost"
         ? "http://localhost:8080"
-        : "https://thewordleis-api.herokuapp.com/"
+        : "https://thewordleis-api.herokuapp.com"
 
     // console.log(baseURL)
     // post data to a url endpoint
@@ -15,8 +15,11 @@ export const getWordleFromBackend = async () => {
 
     const usersTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
     let wordleAnswer = ""
+
     for (var i = 0; i < response.data.length; i++) {
+      console.log(usersTimeZone)
       console.log(response.data[i].timeZone)
+      console.log(response.data[i].timeZone === usersTimeZone)
       if (response.data[i].timeZone === usersTimeZone) {
         wordleAnswer = response.data[i].word
       }
