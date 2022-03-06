@@ -1,5 +1,16 @@
 import React from "react"
 
+import {
+  SpotifyUserControlsProvider,
+  SpotifyUserControlsConsumer,
+} from "../context/wordleContext"
+
 export default function Home() {
-  return <div>new wordle answer</div>
+  return (
+    <SpotifyUserControlsProvider>
+      <SpotifyUserControlsConsumer>
+        {({ wordle }) => <div>todays wordle answer: {wordle}</div>}
+      </SpotifyUserControlsConsumer>
+    </SpotifyUserControlsProvider>
+  )
 }
