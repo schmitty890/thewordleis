@@ -1,4 +1,6 @@
 import React from "react"
+import { Container, Box, Grid, GridItem, Center } from "@chakra-ui/react"
+import "../styles/main.css"
 
 import {
   SpotifyUserControlsProvider,
@@ -9,7 +11,39 @@ export default function Home() {
   return (
     <SpotifyUserControlsProvider>
       <SpotifyUserControlsConsumer>
-        {({ wordle }) => <div>todays wordle answer: {wordle}</div>}
+        {({ wordle }) => (
+          <Container
+            maxW="container.xl"
+            fontFamily="'Clear Sans', 'Helvetica Neue', Arial, sans-serif"
+            bgColor="#121213"
+          >
+            <Grid
+              templateColumns="repeat(5, 1fr)"
+              gap={2}
+              mt={20}
+              fontWeight="bold"
+              color="#ffffff"
+              fontSize={{ base: "4em", md: "5em", lg: "7em" }}
+              bgColor="#121213"
+            >
+              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+                <Center>{wordle[0]}</Center>
+              </GridItem>
+              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+                <Center h="100%">{wordle[1]}</Center>
+              </GridItem>
+              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+                <Center h="100%">{wordle[2]}</Center>
+              </GridItem>
+              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+                <Center h="100%">{wordle[3]}</Center>
+              </GridItem>
+              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+                <Center h="100%">{wordle[4]}</Center>
+              </GridItem>
+            </Grid>
+          </Container>
+        )}
       </SpotifyUserControlsConsumer>
     </SpotifyUserControlsProvider>
   )
