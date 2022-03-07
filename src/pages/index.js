@@ -26,19 +26,44 @@ export default function Home() {
               fontSize={{ base: "4em", md: "5em", lg: "7em" }}
               bgColor="#121213"
             >
-              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+              <GridItem
+                p={{ base: 2, md: 10, lg: 20 }}
+                w="100%"
+                h="100%"
+                bg="#538d4e"
+              >
                 <Center>{wordle[0]}</Center>
               </GridItem>
-              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+              <GridItem
+                p={{ base: 2, md: 10, lg: 20 }}
+                w="100%"
+                h="100%"
+                bg="#538d4e"
+              >
                 <Center h="100%">{wordle[1]}</Center>
               </GridItem>
-              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+              <GridItem
+                p={{ base: 2, md: 10, lg: 20 }}
+                w="100%"
+                h="100%"
+                bg="#538d4e"
+              >
                 <Center h="100%">{wordle[2]}</Center>
               </GridItem>
-              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+              <GridItem
+                p={{ base: 2, md: 10, lg: 20 }}
+                w="100%"
+                h="100%"
+                bg="#538d4e"
+              >
                 <Center h="100%">{wordle[3]}</Center>
               </GridItem>
-              <GridItem p={20} w="100%" h="100%" bg="#538d4e">
+              <GridItem
+                p={{ base: 2, md: 10, lg: 20 }}
+                w="100%"
+                h="100%"
+                bg="#538d4e"
+              >
                 <Center h="100%">{wordle[4]}</Center>
               </GridItem>
             </Grid>
