@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Box, Grid, GridItem, Center } from "@chakra-ui/react"
 import "../styles/main.css"
+import { Seo } from "../components/Seo"
 
 import {
   SpotifyUserControlsProvider,
@@ -17,6 +18,7 @@ export default function Home() {
             fontFamily="'Clear Sans', 'Helvetica Neue', Arial, sans-serif"
             bgColor="#121213"
           >
+            <Seo></Seo>
             <Grid
               templateColumns="repeat(5, 1fr)"
               gap={2}

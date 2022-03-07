@@ -6,7 +6,16 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `The Wordle Is`,
+    siteUrl: `https://www.thewordleis.com`,
+    description: `Find the wordle of the day`,
+    keywords: [
+      `wordle, guess, word, word game, what is the wordle, what is the word, wordle answer, answer, todays wordle`,
+    ],
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
