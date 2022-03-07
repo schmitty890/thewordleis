@@ -20,6 +20,7 @@
     "@emotion/styled": "^11.8.1",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.8.0",
+    "gatsby-plugin-google-gtag": "^4.9.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
