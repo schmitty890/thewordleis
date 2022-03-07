@@ -29,6 +29,7 @@ export default function Home() {
               bgColor="#121213"
             >
               <GridItem
+                className="wiggle"
                 p={{ base: 2, md: 10, lg: 20 }}
                 w="100%"
                 h="100%"
@@ -37,6 +38,7 @@ export default function Home() {
                 <Center>{wordle[0]}</Center>
               </GridItem>
               <GridItem
+                className="wiggle"
                 p={{ base: 2, md: 10, lg: 20 }}
                 w="100%"
                 h="100%"
@@ -45,6 +47,7 @@ export default function Home() {
                 <Center h="100%">{wordle[1]}</Center>
               </GridItem>
               <GridItem
+                className="wiggle"
                 p={{ base: 2, md: 10, lg: 20 }}
                 w="100%"
                 h="100%"
@@ -53,6 +56,7 @@ export default function Home() {
                 <Center h="100%">{wordle[2]}</Center>
               </GridItem>
               <GridItem
+                className="wiggle"
                 p={{ base: 2, md: 10, lg: 20 }}
                 w="100%"
                 h="100%"
@@ -61,6 +65,7 @@ export default function Home() {
                 <Center h="100%">{wordle[3]}</Center>
               </GridItem>
               <GridItem
+                className="wiggle"
                 p={{ base: 2, md: 10, lg: 20 }}
                 w="100%"
                 h="100%"
