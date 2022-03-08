@@ -5,8 +5,8 @@ export const getWordleFromBackend = async () => {
   try {
     let baseURL =
       window.location.hostname === "localhost"
-        ? process.env.LOCALHOST
-        : process.env.SERVER_URL
+        ? "http://localhost:8080"
+        : "https://thewordleis-api.herokuapp.com"
 
     // console.log(baseURL)
     // post data to a url endpoint
@@ -33,12 +33,12 @@ export const getWordleFromBackend = async () => {
 
 export const getWordByDate = async () => {
   console.log("getWordByDate")
-
+  console.log(process.env.LOCALHOST)
   try {
     let baseURL =
       window.location.hostname === "localhost"
-        ? process.env.LOCALHOST
-        : process.env.SERVER_URL
+        ? "process.env.LOCALHOST"
+        : "https://thewordleis-api.herokuapp.com"
 
     var dateObj = new Date()
     var month = dateObj.getMonth() + 1 //months from 1-12
