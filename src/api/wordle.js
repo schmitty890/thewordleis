@@ -47,16 +47,13 @@ export const getWordByDate = async () => {
 
     // console.log(baseURL)
     // post data to a url endpoint
-    const response = await axios.get(
-      `${baseURL}${process.env.GET_WORD_BY_DATE}`,
-      {
-        params: {
-          day,
-          month,
-          year,
-        },
-      }
-    )
+    const response = await axios.get(`${baseURL}/api/v1/getWordByDate`, {
+      params: {
+        day,
+        month,
+        year,
+      },
+    })
     console.log(response.data)
 
     // const usersTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
