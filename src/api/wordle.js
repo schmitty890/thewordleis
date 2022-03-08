@@ -1,12 +1,12 @@
 import axios from "axios"
-import luxon from "luxon"
+
 export const getWordleFromBackend = async () => {
   console.log("getUserCanEditBoolean")
   try {
     let baseURL =
       window.location.hostname === "localhost"
-        ? "http://localhost:8080"
-        : "https://thewordleis-api.herokuapp.com"
+        ? process.env.LOCALHOST
+        : process.env.SERVER_URL
 
     // console.log(baseURL)
     // post data to a url endpoint
@@ -33,11 +33,12 @@ export const getWordleFromBackend = async () => {
 
 export const getWordByDate = async () => {
   console.log("getWordByDate")
+
   try {
     let baseURL =
       window.location.hostname === "localhost"
-        ? "http://localhost:8080"
-        : "https://thewordleis-api.herokuapp.com"
+        ? process.env.LOCALHOST
+        : process.env.SERVER_URL
 
     var dateObj = new Date()
     var month = dateObj.getMonth() + 1 //months from 1-12
@@ -46,13 +47,16 @@ export const getWordByDate = async () => {
 
     // console.log(baseURL)
     // post data to a url endpoint
-    const response = await axios.get(`${baseURL}/api/v1/getWordByDate`, {
-      params: {
-        day,
-        month,
-        year,
-      },
-    })
+    const response = await axios.get(
+      `${baseURL}${process.env.GET_WORD_BY_DATE}`,
+      {
+        params: {
+          day,
+          month,
+          year,
+        },
+      }
+    )
     console.log(response.data)
 
     // const usersTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
