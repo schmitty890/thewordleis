@@ -12,13 +12,18 @@ export default function Home() {
   return (
     <SpotifyUserControlsProvider>
       <SpotifyUserControlsConsumer>
-        {({ wordle }) => (
+        {({ wordle, day, month, year }) => (
           <Container
             maxW="container.xl"
             fontFamily="'Clear Sans', 'Helvetica Neue', Arial, sans-serif"
             bgColor="#121213"
           >
             <Seo></Seo>
+            <Box>
+              <Center mt={4} color="#fff">
+                The wordle on {month}/{day}/{year} is
+              </Center>
+            </Box>
             <Grid
               templateColumns="repeat(5, 1fr)"
               gap={2}

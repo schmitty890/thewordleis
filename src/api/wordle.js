@@ -37,7 +37,7 @@ export const getWordByDate = async () => {
   try {
     let baseURL =
       window.location.hostname === "localhost"
-        ? "process.env.LOCALHOST"
+        ? "http://localhost:8080"
         : "https://thewordleis-api.herokuapp.com"
 
     var dateObj = new Date()
